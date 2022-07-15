@@ -1,11 +1,11 @@
 import {API_URL} from '../config/constants';
 import axios from 'axios';
 
-const axiosInstance = axios.create({
+const api = axios.create({
   baseURL: API_URL,
 });
 
-axiosInstance.interceptors.request.use(
+api.interceptors.request.use(
   async config => {
     config.headers = {
       Accept: 'text/plain',
@@ -19,7 +19,7 @@ axiosInstance.interceptors.request.use(
   },
 );
 
-axiosInstance.interceptors.response.use(
+api.interceptors.response.use(
   response => response,
 
   async error => {
@@ -28,4 +28,4 @@ axiosInstance.interceptors.response.use(
   },
 );
 
-export default axiosInstance;
+export default api;

@@ -1,1 +1,1 @@
-export const API_URL = 'https://pokeapi.co';
+export const API_URL = 'https://pokeapi.co/api/v2/';
